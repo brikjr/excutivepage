@@ -1,0 +1,145 @@
+/*---------------------------------------
+### Navigation 
+-----------------------------------------*/
+.nav-menu{
+   @include medium-screen {
+        position: fixed;
+        z-index: 99;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 96vw;
+        height: 90vh;
+        background-color: #fff;
+        box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: center;
+   }
+   &.open{
+       top: 50%;
+       visibility: visible;
+       opacity: 1;
+       transition: all 0.4s ease-in-out;
+   }
+   ul{
+       @include medium-screen{
+           flex-direction: column;
+           width: 100%;
+           height: 100%;
+           justify-content: center;
+           align-items: center;
+
+           li {
+               margin: 10px 0;
+                .nav-link.outline {
+                    display: block;
+                    padding: 10px 50px;
+                }
+           }
+       }
+        
+   }
+}
+
+/*---------------------------------------
+### hero 
+-----------------------------------------*/
+.hero{
+    
+   .inner-content{
+        @include medium-screen {
+            padding: 30px 0 60px;
+            margin-bottom: 50px;
+            h1{
+                font-size: 4rem;
+                margin-bottom: 1.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+   }
+   .img-shape{
+       @include medium-screen {
+            right: -180px;
+            bottom: -386px;
+           width : 600px;
+           height: 500px;
+       }
+   }
+   img {
+       @include medium-screen {
+           max-width: 50% !important;
+            right: 30px;
+            bottom: -168px;
+       }
+   }
+}
+.hero{
+    @include small-screen{
+        .inner-content{
+            h1{
+                padding-top: 60px;
+                font-size: 3.5rem;
+            }
+        }
+        .img-shape{
+            bottom: -480px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        img{
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 55%;
+            bottom: -196px;
+        }
+    }
+}
+/*---------------------------------------
+### sections 
+-----------------------------------------*/
+.space{
+    @include medium-screen{
+        padding: 80px 40px;
+    }
+}
+.features{
+    @include small-screen{
+        img{
+            max-width: 65%;
+        }
+    }
+}
+
+.section-title{
+    @include medium-screen{
+        p{
+            width: 80% !important;
+        }
+    }
+}
+
+.news{
+    @include small-screen{
+        .news-item{
+            p{
+                padding: 2rem 1rem 1rem;
+            }
+            h4{
+                padding: 1rem 2rem 2rem;
+        
+            }
+        }
+    }
+}
+
+.footer{
+    @include medium-screen{
+        img{
+            max-width: 60%;
+        }
+    }
+}
